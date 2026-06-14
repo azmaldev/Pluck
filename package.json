@@ -1,0 +1,41 @@
+{
+  "name": "pluck",
+  "version": "1.0.0",
+  "description": "Extract emails, phones, domains, social links from any URL. Toggle what you need. Open source.",
+  "type": "module",
+  "main": "src/index.ts",
+  "bin": {
+    "pluck": "src/index.ts"
+  },
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "build": "tsc",
+    "start:prod": "node dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "scraper",
+    "email-extractor",
+    "phone-extractor",
+    "lead-generation",
+    "hono",
+    "cheerio"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@hono/node-server": "^2.0.4",
+    "@hono/zod-validator": "^0.8.0",
+    "cheerio": "^1.2.0",
+    "hono": "^4.12.25",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.3",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.8"
+  }
+}

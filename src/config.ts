@@ -1,0 +1,36 @@
+export const defaults = {
+  port: 3000,
+  fetchTimeout: 15000,
+  userAgent: 'Pluck/1.0 (+https://github.com/pluck)',
+  maxResultsPerField: 500,
+  maxBatchSize: 25,
+  batchConcurrency: 5,
+  extract: {
+    emails: true,
+    phones: true,
+    domains: true,
+    socials: true,
+    meta: true,
+    names: true,
+  },
+};
+
+export const socialPlatforms = {
+  linkedin: [/linkedin\.com\//i],
+  twitter: [/twitter\.com\//i, /x\.com\//i],
+  github: [/github\.com\//i],
+  facebook: [/facebook\.com\//i, /fb\.com\//i],
+  instagram: [/instagram\.com\//i],
+  youtube: [/youtube\.com\//i, /youtu\.be\//i],
+  tiktok: [/tiktok\.com\//i],
+  reddit: [/reddit\.com\//i],
+  discord: [/discord\.com\//i, /discord\.gg\//i],
+  telegram: [/t\.me\//i, /telegram\.me\//i],
+  whatsapp: [/wa\.me\//i, /whatsapp\.com\//i],
+  pinterest: [/pinterest\.com\//i, /pinterest\.ca\//i],
+  medium: [/medium\.com\//i],
+  twitch: [/twitch\.tv\//i],
+  bluesky: [/bsky\.app\//i],
+  mastodon: [/mastodon\.\w+/i],
+  threads: [/threads\.net\//i],
+} as const;
